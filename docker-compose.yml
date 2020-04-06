@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  logging:
+    container_name: python-logging
+    image: zzzcat/dispshell
+    tty: true
+    volumes:
+      - ./logging/:/work/:rw
+    working_dir: /work/
+    environment: 
+      # "python -B"
+      PYTHONDONTWRITEBYTECODE: 1
+
