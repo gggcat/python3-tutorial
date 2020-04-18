@@ -9,6 +9,15 @@ services:
       - ./logging/:/work/:rw
     working_dir: /work/
     environment: 
-      # "python -B"
+      PYTHONDONTWRITEBYTECODE: 1
+
+  keyring:
+    container_name: python-keyring
+    image: zzzcat/dispshell
+    tty: true
+    volumes:
+      - ./keyring/:/work/:rw
+    working_dir: /work/
+    environment: 
       PYTHONDONTWRITEBYTECODE: 1
 
