@@ -1,23 +1,12 @@
 version: '3'
 
 services:
-  logging:
-    container_name: python-logging
+  tutorial:
     image: zzzcat/dispshell
     tty: true
     volumes:
-      - ./logging/:/work/:rw
+      - .:/work/:rw
     working_dir: /work/
     environment: 
       PYTHONDONTWRITEBYTECODE: 1
-
-  keyring:
-    container_name: python-keyring
-    image: zzzcat/dispshell
-    tty: true
-    volumes:
-      - ./keyring/:/work/:rw
-    working_dir: /work/
-    environment: 
-      PYTHONDONTWRITEBYTECODE: 1
-
+      SLACK_INCOMING_WEBHOOK_URL: ${SLACK_INCOMING_WEBHOOK_URL}
