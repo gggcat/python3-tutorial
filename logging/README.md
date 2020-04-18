@@ -14,4 +14,5 @@
 
 ## logging_json.py
 
-- json形式でlogging設定を読み込む
+- json形式の場合 SMTPHandler に渡すタプルをうまく処理できない
+
