@@ -1,0 +1,2 @@
+include src/*/config/*.ini
+global-exclude *.py[cod] __pycache__ *.so
