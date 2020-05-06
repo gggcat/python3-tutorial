@@ -17,3 +17,9 @@ services:
       ALGOLIA_APP_ID: ${ALGOLIA_APP_ID}
       ALGOLIA_API_KEY: ${ALGOLIA_API_KEY}
       ALGOLIA_INDEX_NAME: ${ALGOLIA_INDEX_NAME}
+
+  splash:
+    image: scrapinghub/splash
+    #command: --disable-lua-sandbox
+    ports:
+      - 8050:8050
