@@ -21,5 +21,6 @@ services:
   splash:
     image: scrapinghub/splash
     #command: --disable-lua-sandbox
+    #command: --disable-private-mode
     ports:
       - 8050:8050
