@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  tutorial:
+    image: zzzcat/scrapy:latest
+    tty: true
+    volumes:
+      - .:/work/scrapy/:rw
+    environment: 
+      PYTHONDONTWRITEBYTECODE: 1
+      SLACK_INCOMING_WEBHOOK_URL: ${SLACK_INCOMING_WEBHOOK_URL}
+
+  splash:
+    image: scrapinghub/splash
+    #command: --disable-lua-sandbox
+    #command: --disable-private-mode
+    ports:
+      - 8050:8050
