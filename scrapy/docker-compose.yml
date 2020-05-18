@@ -5,7 +5,8 @@ services:
     image: zzzcat/scrapy:latest
     tty: true
     volumes:
-      - .:/work/scrapy/:rw
+      - .:/work/:rw
+    working_dir: /work
     environment: 
       PYTHONDONTWRITEBYTECODE: 1
       SLACK_INCOMING_WEBHOOK_URL: ${SLACK_INCOMING_WEBHOOK_URL}
